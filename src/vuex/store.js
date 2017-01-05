@@ -36,7 +36,6 @@ const mutations = {
     // 获取banner的图片数据-方案
     Vue.http.get(planApi.banner)
     .then(({data: {code, msg, info}})=>{
-      console.log(code, msg, info)
       if (code === 1) {
         state.planBanner = []
         if (info.length > 0) {
